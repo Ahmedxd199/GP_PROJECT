@@ -29,3 +29,7 @@ class StudentsInCourses(db.Model):
     coursename =  db.Column(db.String(40),db.ForeignKey('courses.CourseName'))
     #Iusername = db.Column(db.String(20),db.ForeignKey('courses.Iusername'))
     Susername = db.Column(db.String(20),db.ForeignKey('user.username'))
+
+def get_id(self):
+    """Return the email address to satisfy Flask-Login's requirements."""
+    return self.username
